@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p{
+    font-family: "Inria Sans", sans-serif;
+    font-size: 16px;    
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1{
+    font-family: "Inria Sans", sans-serif;
+    font-size: 42px;    
+    font-weight: 700;
+    font-style: normal;
+}
+
+h2{
+    font-family: "Inria Sans", sans-serif;
+    font-size: 36px;    
+    font-weight: 600;
+    font-style: normal;
+}
+
+.title{
+    font-family: "Inconsolata", monospace;
+    font-size: 56px;    
+    font-weight: 700;
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-variation-settings: "wdth" 100;
+}
+
+.center-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-center-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.center-space-betwenn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecario{
+    background-color: #080E47;
+    height: 150px;
+    padding: 12px;
+    display: grid;
+    grid-template-columns: 6fr 8fr 1fr;
+}
+
+.cabecario p{
+    color: white;
+}
+
+.cabecarioEsquerda{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
