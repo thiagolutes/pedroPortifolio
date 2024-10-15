@@ -10,43 +10,55 @@
 
     <div class="cabecario">
         <div class="cabecarioEsquerda">
-            <p class="title">Pedro - Filipe</p>
+            <p class="title">Pedro Filipe</p>
         </div>
         <div class="cabecarioMid">
-            <h4>Inicio</h4>
-            <h4>Habilidade</h4>
-            <h4>Projetos</h4>
-            <h4>Contato</h4>
+            <h4 onclick="window.location.href='#inicio'">Inicio</h4>
+            <h4 onclick="window.location.href='#'">Habilidade</h4>
+            <h4 onclick="window.location.href='#'">Projetos</h4>
+            <h4 onclick="window.location.href='#'">Contato</h4>
         </div>
-        <div class="cabecarioDireita">
+        <div class="cabecarioDireita center-center">
 
             <div id="mudarTema">
-                <p id="paragrafoTema"> Mudar tema</p>
+                <h5 style="color: var(--secundaria);">Tema</h5>
                 <input type="checkbox" class="checkbox" id="checkbox">
                 <label class="label" for="checkbox" id="label1">
-                  <i class="fas fa-moon"></i>
-                <i class="fas fa-sun"></i> 
-                <div class="bola"></div> 
+                    <div class="icon-container">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </div>
                 </label>
             </div>
+            
 
         </div>
     </div>
 
     <div class="container">
         <div class="main">
-            <div id="inicio">
-                <div class="ftoPrincipal center-center" id="ftoPrincipal">
-                    <img src="Assets/Screenshot_20241009-104316_Instagram.jpg" alt="">
+            <div id="inicio" id="inicio">
+                <div class="line1-row" style="grid-column: 1/ span 2;">
+                    <div class="center-center">
+                        <h1 id="welcome">Seja bem vindo!</h1>
+                    </div>
                 </div>
-                <div>
-                    <h4>Sou Pedro Filipe, estudante do curso Técnico em Manutenção e Desenvolvimento de Sistemas no Cotemig. Estou profundamente interessado em tecnologia e me dedicando ao desenvolvimento de habilidades em criação de sites e aplicações web.
+                <div class="wdt100 center-center paiFtoPrincipal">
+                    <div class="ftoPrincipal center-center" id="ftoPrincipal">
+                        <img src="Assets/Screenshot_20241009-104316_Instagram.jpg" alt="">
+                    </div>
+                </div>
+                <div class="line2-column line2-row paiTextWelcome">
+                    <h4 class="labelSejaBemVindo">Sou Pedro Filipe, estudante do curso Técnico em Manutenção e Desenvolvimento de Sistemas no Cotemig. Estou profundamente interessado em tecnologia e me dedicando ao desenvolvimento de habilidades em criação de sites e aplicações web.
                     Atualmente estou focado em:                        
                     Embora ainda esteja em formação e não tenha experiência profissional estou animado para aplicar meus conhecimentos m projetos acadêmicos e explorar novas oportunidades na área de desenvolvimento web</h4>
                 </div>
+
             </div>
             <div class="skills">
-
+                <div class="center-center">
+                    <h1 id="welcome2">Seja bem vindo!</h1>
+                </div>
             </div>
         </div>
     </div>
