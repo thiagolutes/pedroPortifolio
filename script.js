@@ -58,6 +58,7 @@ function configurarObserver() {
     const textHabilidades = document.getElementById('textHabilidades');
     const languagesAndSoftwares = document.getElementById('languagesAndSoftwares');
     const cardSkills = document.querySelectorAll('#cardSkills');
+    const projects = document.getElementById('projects');
     
     const observador = (entries, observer) => {
         entries.forEach(entry => {
@@ -77,6 +78,7 @@ function configurarObserver() {
     observer.observe(welcome2);
     observer.observe(textHabilidades);
     observer.observe(languagesAndSoftwares);
+    observer.observe(projects);
     cardSkills.forEach(card => {
         observer.observe(card);
     });
