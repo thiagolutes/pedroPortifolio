@@ -93,3 +93,7 @@ function animarElemento(element) {
     element.classList.add('slide-in-top-to-back');
 
 }
+
+function abrirSiteImg(url){
+    window.open(url, '_blank');
+}
