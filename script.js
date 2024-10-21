@@ -125,3 +125,19 @@ function whatzapMsg(){
     const url = `https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(mensagem)}`;        
     abrirSiteImg(url);
 }
+
+function enviarEmail() {
+    const email = 'exemplo@gmail.com';
+    const assunto = 'Informações';
+    const mensagem = 'Olá, gostaria de mais informações!';
+    const url = `mailto:${email}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(mensagem)}`;
+    abrirSiteImg(url);
+}
+
+function enviarEmail() {
+    const email = 'pedrofilipevictor13@gmail.com';
+    const assunto = 'Informações';
+    const mensagem = 'Olá, gostaria de mais informações!';
+    const url = `mailto:${email}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(mensagem)}`;
+    abrirSiteImg(url);
+}
