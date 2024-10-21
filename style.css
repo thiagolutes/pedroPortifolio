@@ -104,6 +104,7 @@ body {
     cursor: default;
     font-size: clamp(24px, 6vw + 2rem, 48px);
     transition: all ease 0.5s;
+    color: var(--secundaria);
 }
 
 .center-center {
