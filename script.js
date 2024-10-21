@@ -118,3 +118,11 @@ function animarElemento(element) {
 function abrirSiteImg(url){
     window.open(url, '_blank');
 }
+
+function whatzapMsg(){
+        const numero = '5531984316265'; 
+        const mensagem = 'Olá, gostaria de mais informações!';
+        const url = `https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(mensagem)}`;        
+        abrirSiteImg(url);
+    });
+}
