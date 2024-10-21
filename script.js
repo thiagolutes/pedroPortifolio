@@ -134,6 +134,6 @@ function enviarEmail() {
     const outlookUrl = `https://outlook.live.com/owa/?path=/mail/action/compose&to=${email}&subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(mensagem)}`;
     const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(mensagem)}`;
 
-    abrirSite(gmailUrl) || abrirSite(outlookUrl) || abrirSite(mailtoUrl);
+    abrirSiteImg(gmailUrl) || abrirSite(outlookUrl) || abrirSite(mailtoUrl);
 }
 
