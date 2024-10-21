@@ -596,6 +596,10 @@ svg{
     max-width: 500px;
 }
 
+.svgInvert{
+    cursor: pointer;
+}
+
 /* Responsividade */
 
 @Media(max-width: 1814px) {
