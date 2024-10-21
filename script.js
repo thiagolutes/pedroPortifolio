@@ -127,17 +127,13 @@ function whatzapMsg(){
 }
 
 function enviarEmail() {
-    const email = 'exemplo@gmail.com';
-    const assunto = 'Informações';
-    const mensagem = 'Olá, gostaria de mais informações!';
-    const url = `mailto:${email}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(mensagem)}`;
-    abrirSiteImg(url);
-}
-
-function enviarEmail() {
     const email = 'pedrofilipevictor13@gmail.com';
     const assunto = 'Informações';
     const mensagem = 'Olá, gostaria de mais informações!';
-    const url = `mailto:${email}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(mensagem)}`;
-    abrirSiteImg(url);
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(assunto)}&body=${encodeURIComponent(mensagem)}`;
+    const outlookUrl = `https://outlook.live.com/owa/?path=/mail/action/compose&to=${email}&subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(mensagem)}`;
+    const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(mensagem)}`;
+
+    abrirSite(gmailUrl) || abrirSite(outlookUrl) || abrirSite(mailtoUrl);
 }
+
