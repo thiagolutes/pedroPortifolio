@@ -88,6 +88,9 @@ h5 {
 body {
     background-color: var(--secundaria);
     transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .title {
@@ -152,6 +155,46 @@ body {
 
 .hgt100 {
     height: 100%;
+}
+
+svg{
+    width: 84px;
+    height: 84px;
+}
+
+.tooltip {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: -65%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltiptext p {
+    color: whitesmoke;
+    font-size: 12px;
+    font-weight: 600;
 }
 
 .cabecario {
@@ -504,6 +547,54 @@ body {
     font-size: 20px;
 }
 
+#welcome3 {
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+#contact {
+    display: grid;
+    grid-template-rows: 3fr 7fr;
+    min-height: 77vh;
+}
+
+#welcome4 {
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.iconsTextContact{
+    width: 500px;
+    justify-content: space-between;
+}
+
+.rodape{
+    height: 23vh;
+    min-height: 100px;
+    background-color: var(--primaria);
+    min-height: 216px;
+}
+
+.rodapeContainer{
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    height: 100%;
+}
+
+.rodapeMain{
+    grid-column: 2;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodapeMainContainerElements{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 500px;
+}
 
 /* Responsividade */
 
@@ -518,11 +609,6 @@ body {
         min-height: 100vh;
         grid-template-rows: 2fr 6fr;
     }
-
-    #projects {
-        min-height: 100vh;
-    }
-
     .containerLingaugens {
         gap: 24px;
     }
@@ -684,6 +770,17 @@ body {
 
     #languagesAndSoftwares {
         font-size: 30px;
+    }
+    svg{
+        width: 60px;
+        height: 60px;
+    }
+    .iconsTextContact{
+        width: 350px;
+    }
+    .svgInvert{
+        width: 48px;
+        height: 48px;
     }
 }
 

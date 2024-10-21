@@ -26,7 +26,6 @@ check.addEventListener('change', () => {
     alterarTema(check.checked);
 });
 
-
 function alterarTema(isDark) {
     const root = document.documentElement;
     document.body.classList.toggle('dark', isDark);
@@ -36,29 +35,48 @@ function alterarTema(isDark) {
         elementos.classList.toggle('dark', isDark);
     });
 
-    if (isDark) {  
-        root.style.setProperty('--primaria', '#FFF');
-        root.style.setProperty('--secundaria', '#080E47');
-        root.style.setProperty('--primariaFiltro', '#ffffff88');
-        root.style.setProperty('--secundariaFiltro', '#091264c4');
-        localStorage.setItem('tema', 'dark');
-    } else {
-        root.style.setProperty('--primaria', '#080E47');
-        root.style.setProperty('--secundaria', '#FFF');
-        root.style.setProperty('--primariaFiltro', '#091264c4');
-        root.style.setProperty('--secundariaFiltro', '#ffffff88');
-        localStorage.setItem('tema', 'light');
-    }
+    const svgPaths = document.querySelectorAll('svg path');
+    const svgInvert = document.querySelectorAll('.svgInvert path');
+
+    svgPaths.forEach(path => {
+        if (isDark) {  
+            root.style.setProperty('--primaria', '#FFF');
+            root.style.setProperty('--secundaria', '#080E47');
+            root.style.setProperty('--primariaFiltro', '#ffffff88');
+            root.style.setProperty('--secundariaFiltro', '#091264c4');
+            path.setAttribute('fill', '#FFF');
+        } else {
+            root.style.setProperty('--primaria', '#080E47');
+            root.style.setProperty('--secundaria', '#FFF');
+            root.style.setProperty('--primariaFiltro', '#091264c4');
+            root.style.setProperty('--secundariaFiltro', '#ffffff88');
+            path.setAttribute('fill', '#080E47');
+        }
+    });
+
+    svgInvert.forEach(path => {
+        if (isDark) {
+            path.setAttribute('fill', '#080E47'); 
+        } else {
+            path.setAttribute('fill', '#FFF'); 
+        }
+    });
+
+    localStorage.setItem('tema', isDark ? 'dark' : 'light');
 }
+
 
 function configurarObserver() {
     const imagem = document.getElementById('ftoPrincipal');
     const welcome = document.getElementById('welcome');
     const welcome2 = document.getElementById('welcome2');
+    const welcome3 = document.getElementById('welcome3');
+    const welcome4 = document.getElementById('welcome4');
     const textHabilidades = document.getElementById('textHabilidades');
     const languagesAndSoftwares = document.getElementById('languagesAndSoftwares');
     const cardSkills = document.querySelectorAll('#cardSkills');
     const projects = document.getElementById('projects');
+    const contact = document.getElementById('contact');
     
     const observador = (entries, observer) => {
         entries.forEach(entry => {
@@ -76,12 +94,15 @@ function configurarObserver() {
     observer.observe(imagem);
     observer.observe(welcome);
     observer.observe(welcome2);
+    observer.observe(welcome3);
+    observer.observe(welcome4);
     observer.observe(textHabilidades);
     observer.observe(languagesAndSoftwares);
     observer.observe(projects);
     cardSkills.forEach(card => {
         observer.observe(card);
     });
+    observer.observe(contact);
 
 }
 
