@@ -161,6 +161,12 @@ body {
 svg{
     width: 84px;
     height: 84px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+svg:hover{
+    transform: scale(1.03)
 }
 
 .tooltip {
@@ -595,10 +601,6 @@ svg{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 500px;
-}
-
-.svgInvert{
-    cursor: pointer;
 }
 
 /* Responsividade */
